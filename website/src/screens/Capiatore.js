@@ -46,8 +46,8 @@ const Capiatore = () => {
             <option value='Emascule'>Emasculé</option>
           </select>
         
-        <label for='hair_color'className="titres-filtrage"> Couleur de cheveux</label>
-          <select name='hair_color'className="resultats-filtrage" onChange={recupData}>
+        <label for='hairColor'className="titres-filtrage"> Couleur de cheveux</label>
+          <select name='hairColor'className="resultats-filtrage" onChange={recupData}>
             <option value='Noir' >Noir</option>
             <option value='Brun'>Brun</option>
             <option value='Roux'>Roux</option>
