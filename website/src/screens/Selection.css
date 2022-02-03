@@ -1,0 +1,78 @@
+    .page-Selection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        }
+    
+    .bloc-poucavius{
+    height: 45%;
+    width: 100%;
+    background-image: url(../assets/informateur.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15vw;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 4px 5px black;
+    }
+
+    .bloc-info-Selection{
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 8vw;
+        font-weight: bold;
+        color:black;
+        text-shadow: 2px 4px 2px grey;
+        background-image: url('../assets/marbre.jpg') ;
+        
+
+
+
+    }
+
+    .bloc-capiatore{
+        height: 45%;
+        width: 100%;
+        background-image: url(../assets/chasseur.jpg);
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15vw;
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 4px 5px black;
+
+    }
+  
+
+
+
+
+    @media all and (min-width: 600px) and (max-width: 1024px){
+        .bloc-poucavius, .bloc-capiatore{
+            font-size: 100px;
+        }
+        .bloc-info-Selection{
+            font-size: 50px;
+            }
+    }
+
+
+        @media all and (min-width: 1025px) {
+            .bloc-poucavius, .bloc-capiatore{
+                font-size: 115px;
+            }
+            .bloc-info-Selection{
+            font-size: 60px;
+            }
+        }
+
+     
+     

@@ -1,25 +1,65 @@
-@media all and (min-width: 320px) and (max-width: 599px){
     .page-Welcome {
-        background: green;
-        height: 100%;
+        background: #cb2d3e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                height: 100%;
         min-height: 100vh;
         width: 100%;
 }
-}
+/* 
+A INTEGRER AU BESOIN - EFFET BLUR DERRIERE LOGO SI FOND
+<div className="effet-blur"> 
+
+
+.effet-blur{
+    filter: blur(4px);
+    height: 100%;
+        min-height: 100vh;
+        width: 100%;
+} */
+
+    .logo{
+        width: 300px;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
 
 @media all and (min-width: 600px) and (max-width: 1024px){
     .page-Welcome {
-        background: red;
-        height: 100%;
+        background: #870000;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #5a0404, #870000);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #5a0404, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                height: 100%;
         min-height: 100vh;
-        width: 100%;}
+        width: 100%;
+}
+
+        .logo{
+            width: 300px;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
 }
 
 @media all and (min-width: 1025px) {
     .page-Welcome {
-        background: black;
-        height: 100%;
+        background: #870000;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #5a0404, #870000);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #5a0404, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                height: 100%;
         min-height: 100vh;
         width: 100%;
+}
+    .logo{
+        width: 400px;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 }
