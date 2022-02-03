@@ -1,0 +1,47 @@
+.bande-profil-proie{
+    height: 100px;
+    width: 95%;
+    border: 2px solid black;
+    background-color: rgb(245, 245, 245);
+    margin: 2px 0;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photo-target-list{
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+    border:2px solid rgb(173, 173, 173);
+    margin-left: 10px;
+}
+
+.ligne-bande-profil-proie-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    width: 80%;
+    height: 80%;
+    /* border-right: 2px solid black; */
+}
+
+.infos-proie-list{
+    font-weight: bold;
+
+}
+
+
+.image-target-list{
+    width: 60px;
+    height: 60px;
+padding: 5px 5px;
+margin:0 15px;
+    object-fit: cover;
+    background-color: #cb2d3e;
+    border-radius: 50%;
+    /* filter: invert(100%);  */
+}

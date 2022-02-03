@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #cb2d3e; 
-    background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #1f3b47;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #3a606d, #1f3b47);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #3a606d, #1f3b47); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
     height: 100%;
     min-height: 100vh;
     width: 100%;
@@ -26,13 +28,15 @@
     color:white;
     font-size: 18px;
     font-weight: bold ;
-    background: #cb2d3e;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ef473a, #cb2d3e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #2C5364;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #3a606d, #2C5364);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #3a606d, #2C5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
     display: flex;
     align-items: center;
     justify-content: center;
-    margin:10px;
+    margin:10px
 }
 .poucav-btn:active{
     box-shadow: inset 2px 2px 2px 2px black;
@@ -40,8 +44,8 @@
 .input-name{
     height: fit-content;
     width: 80%;
-    border: 2px solid black;
-    background-color: gainsboro;
+    border: 2px solid #467081;
+    background-color: rgb(246, 245, 245);
     margin: 2px 0;
     padding: 10px;
     border-radius: 15px;

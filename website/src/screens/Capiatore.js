@@ -2,8 +2,7 @@ import React from 'react';
 import'./Capiatore.css'
 import Header from '../component/Header';
 import { useState,useEffect } from 'react';
-import panier from '../assets/target3.png'
-
+import CardProfil from '../component/CardProfil';
 
 
 const Capiatore = () => {
@@ -20,6 +19,9 @@ const Capiatore = () => {
         setChange(false)
         filterSelection.style.display='none'
       }     
+  }
+  const recupData=()=>{
+    console.log('EVENT TARGET ', EventTarget.selectedIndex.value)
   }
   useEffect(()=>{
     //Appel a l'api
@@ -41,18 +43,18 @@ const Capiatore = () => {
           <select name='sexe'className="resultats-filtrage">
             <option value='Femme'>Femme</option>
             <option value='Homme'>Homme</option>
-            <option value='Emasculé'>Emasculé</option>
+            <option value='Emascule'>Emasculé</option>
           </select>
         
         <label for='hair_color'className="titres-filtrage"> Couleur de cheveux</label>
-          <select name='hair_color'className="resultats-filtrage">
-            <option value='Noir'>Noir</option>
+          <select name='hair_color'className="resultats-filtrage" onChange={recupData}>
+            <option value='Noir' >Noir</option>
             <option value='Brun'>Brun</option>
             <option value='Roux'>Roux</option>
             <option value='Blond'>Blond</option>
             <option value='Blanc'>Blanc</option>
             <option value='Gris'>Gris</option>
-            <option value='Cranedoeuf'>Crane d'oeûf</option>
+            <option value='Cranedoeuf'>Crâne d'oeuf</option>
           </select>
           <label for='taille'className="titres-filtrage">Taille</label>
           <select name='taille'className="resultats-filtrage">
@@ -91,16 +93,11 @@ const Capiatore = () => {
         <div className='list-proies'> 
         Liste de Proies
       </div>
-      <div className='bande-profil-proie'>
-        <div className="ligne-bande-profil-proie-list">
-          <div className='infos-proie-list'>NOM from API</div>
-          <div className='infos-proie-list'>SEXE from API</div>
-          <div className='infos-proie-list'>ARME from API</div>
-          <div className='infos-proie-list'>LOCALISATION from API</div>
-        </div>
-        <img src={panier} alt=""className="image-target-list" />
-        
-      </div>
+      <CardProfil />
+      <CardProfil />
+      <CardProfil />
+      <CardProfil />
+
     
 
     </div>
