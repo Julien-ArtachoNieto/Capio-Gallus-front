@@ -2,6 +2,8 @@ import React from 'react';
 import'./Capiatore.css'
 import Header from '../component/Header';
 import { useState,useEffect } from 'react';
+import panier from '../assets/target3.png'
+
 
 
 const Capiatore = () => {
@@ -63,8 +65,8 @@ const Capiatore = () => {
           <select name='carrure'className="resultats-filtrage">
             <option value='Athleticus'>Athléticus</option>
             <option value='BienPortant'>Bien-portantus</option>
-            <option value='Moyen'>Bofus</option>
-            <option value='Insignifiant'>Biscottus</option>
+            <option value='Bofus'>Bofus</option>
+            <option value='Biscottus'>Biscottus</option>
           </select>
           <label for='pilosité' className="titres-filtrage">Pilosité apparente</label>
           <select name='pilosité'className="resultats-filtrage">
@@ -90,9 +92,14 @@ const Capiatore = () => {
         Liste de Proies
       </div>
       <div className='bande-profil-proie'>
-        <div className='nom-proie'>Proie n°</div>
-        <div className='nom-proie-api'>ID API</div>
-
+        <div className="ligne-bande-profil-proie-list">
+          <div className='infos-proie-list'>NOM from API</div>
+          <div className='infos-proie-list'>SEXE from API</div>
+          <div className='infos-proie-list'>ARME from API</div>
+          <div className='infos-proie-list'>LOCALISATION from API</div>
+        </div>
+        <img src={panier} alt=""className="image-target-list" />
+        
       </div>
     
 

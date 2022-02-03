@@ -6,7 +6,7 @@ import Selection from './screens/Selection';
 import Capiatore from './screens/Capiatore';
 import Header from './component/Header';
 import Footer from './component/Footer';
-
+import Poucavius from './screens/Poucavius';
 import './App.css'
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
   <div className="App">
       <Routes>
         <Route path="/" element={<Welcome />} />
-        <Route path="/Home" element={<Home />} />
+        <Route path="/Poucavius" element={<Poucavius/>} />
         <Route path="/Selection" element={<Selection />} />
         <Route path="/Capiatore" element={<Capiatore />} />
       </Routes>
