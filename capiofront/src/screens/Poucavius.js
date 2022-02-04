@@ -1,13 +1,13 @@
 import '../component/Balance.css'
 
-
+        import axios from 'axios'
         import { useState } from "react";
         import Dropdown from "../component/Dropdown";
 
         
         const Poucavius =()=>{
             // const poucavBtn=()=>{
-            const [name, setName] = useState('name');
+            const [name, setName] = useState('');
             const [sexe, setSexe] = useState('sexe');
             const [type, setType] = useState('type');
             const [age, setAge] = useState('Age');
@@ -24,7 +24,7 @@ import '../component/Balance.css'
             const handleNameChange = (event) => {
               setName(event.target.value);
             };
-          
+          console.log(name)
             const handleSexeChange = (event) => {
               setSexe(event.target.value);
             };
@@ -67,7 +67,23 @@ import '../component/Balance.css'
             const handleLocalisationChange = (event) => {
               setLocalisation(event.target.value);
             };
-        
+            
+            const postGueu=()=>{
+              axios.post('http://localhost:3306/poucavius/gaulois',{
+                name:name,
+                age:age,
+                imgurl: NULL,
+                tall:taille,
+                hair_color:hairColor,
+                sex:sexe,
+                pilosity:pilosite,
+                skin_color:skinColor,
+                armed:arme,
+                localisation:localisation,
+                stature:carrure,
+                status:NULL,
+                              })
+                            }
            
           
             return (
@@ -231,7 +247,7 @@ import '../component/Balance.css'
                       onChange={handleLocalisationChange}/>
                   </div>
                   <div>
-                <button className="input-name">Confirmer votre délation</button>
+                <button className="input-name" onClick={()=>postGueu()}>Confirmer votre délation</button>
               </div>
               </div>
             </div>
