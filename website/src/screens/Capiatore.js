@@ -3,8 +3,7 @@ import'./Capiatore.css'
 import Header from '../component/Header';
 import { useState,useEffect } from 'react';
 import CardProfil from '../component/CardProfil';
-
-
+import axios from 'axios'
 const Capiatore = () => {
 
 
@@ -14,7 +13,7 @@ const Capiatore = () => {
   const activeFilter=()=>{
       if(!change){
         setChange(true)
-        filterSelection.style.display='block'
+        filterSelection.style.display='flex'
       }else{
         setChange(false)
         filterSelection.style.display='none'
@@ -24,7 +23,8 @@ const Capiatore = () => {
     console.log('EVENT TARGET ', EventTarget.selectedIndex.value)
   }
   useEffect(()=>{
-    //Appel a l'api
+    axios.get('http://localhost:3100/capiatore/gaulois').then((res)=>setDatas(res.data))
+    
   },[])
 
 
@@ -35,7 +35,7 @@ const Capiatore = () => {
       <div className='filter-btn' onClick={activeFilter}> 
         Peaufiner la traque
       </div>
-
+      { console.log("DONNEES",datas)}
 
       <div className='filter-selection'>
         
@@ -83,8 +83,7 @@ const Capiatore = () => {
             <option value='Non'>Non comme un looser</option>
             <option value='Fiole'>J'ai fermé les yeux comme une fiole</option>
           </select>
-          
-          
+                 
           
           
       </div>
@@ -93,10 +92,8 @@ const Capiatore = () => {
         <div className='list-proies'> 
         Liste de Proies
       </div>
-      <CardProfil />
-      <CardProfil />
-      <CardProfil />
-      <CardProfil />
+      {datas.map(data=><CardProfil key={data.id} data={data}/>)}
+     
 
     
 
