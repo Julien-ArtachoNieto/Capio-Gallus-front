@@ -4,11 +4,11 @@ import Header from '../component/Header';
 import { useState,useEffect } from 'react';
 import CardProfil from '../component/CardProfil';
 import axios from 'axios'
-const Capiatore = () => {
-
+const Capiatore = (props) => {
+  const {datas,setDatas}=props
 
   const [change,setChange]=useState(false)
-  const [datas,setDatas]=useState([])
+  
   const filterSelection=document.querySelector('.filter-selection')
   const activeFilter=()=>{
       if(!change){
@@ -92,7 +92,7 @@ const Capiatore = () => {
         <div className='list-proies'> 
         Liste de Proies
       </div>
-      {datas.map(data=><CardProfil key={data.id} data={data}/>)}
+      {datas ? datas.map(data=><CardProfil key={data.id} data={data}/> ) : ''}
      
 
     

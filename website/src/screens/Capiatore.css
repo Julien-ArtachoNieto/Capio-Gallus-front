@@ -40,12 +40,12 @@
 .filter-btn:active{
     box-shadow: inset 2px 2px 2px 2px black;
 }
-.filter-btn:hover{ 
-    /* Y'a Moyen de supprimer au besoin */
+/* .filter-btn:hover{ 
     background-image: url('../assets/hoverbtn.jpg');
     background-position: center; 
     text-shadow: 1px 2px 4px black;
-}
+} */
+
 .filter-selection{
     display: none;
     height: -moz-fit-content;

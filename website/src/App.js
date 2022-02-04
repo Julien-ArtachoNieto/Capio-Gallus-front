@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import Welcome from './screens/Welcome';
 // import Home from './screens/Home';
@@ -12,15 +13,16 @@ import './App.css'
 import Profil from './screens/Profil';
 
 const App = () => {
+  const [datas,setDatas]=useState([])
   return (
   <div className="App">
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/Poucavius" element={<Poucavius/>} />
-        <Route path="/Selection" element={<Selection />} />
-        <Route path="/Capiatore" element={<Capiatore />} />
-        <Route path="/Capiatore/LaTraque" element={<LaTraque />} />
-        <Route path="/Capiatore/Profil" element={<Profil />} />
+        <Route path="/Selection" element={<Selection datas={datas} setDatas={setDatas}/>} />
+        <Route path="/Capiatore" element={<Capiatore datas={datas} setDatas={setDatas}/>} />
+        <Route path="/Capiatore/LaTraque" element={<LaTraque datas={datas} setDatas={setDatas}/>} />
+        <Route path="/Capiatore/Profil" element={<Profil datas={datas} setDatas={setDatas}/>} />
 
       </Routes>
   </div>

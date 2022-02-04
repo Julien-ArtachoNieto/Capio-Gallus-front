@@ -26,6 +26,7 @@
     padding: 10px;
     width: 80%;
     height: 80%;
+    overflow: hidden;
     /* border-right: 2px solid black; */
 }
 
@@ -34,14 +35,20 @@
 
 }
 
+.import-api-proie-list{
+    font-weight: lighter;
+}
+
+.infos-proie-list,.import-api-proie-list {
+    font-size: 11px;
+}
 
 .image-target-list{
     width: 60px;
     height: 60px;
 padding: 5px 5px;
-margin:0 15px;
+margin:0 5px;
     object-fit: cover;
     background-color: #cb2d3e;
     border-radius: 50%;
-    /* filter: invert(100%);  */
 }

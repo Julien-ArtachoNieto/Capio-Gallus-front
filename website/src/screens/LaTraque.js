@@ -4,7 +4,9 @@ import HeaderTraque from '../component/HeaderTraque';
 import { useState,useEffect } from 'react';
 import CardProfil from '../component/CardProfil';
 
-const LaTraque = () => {
+const LaTraque = (props) => {
+
+  const {datas,setDatas}=props
 
 //   const [datas,setDatas]=useState([])//   
 
@@ -35,8 +37,9 @@ const LaTraque = () => {
     <div className='list-nouvelles-proies back-orange'> 
         Liste de Proies Disponibles
       </div>
-          <CardProfil />
-          <CardProfil />
+         {datas.map(data=><CardProfil data={data} />)}
+         
+         
 
       </div>
     
@@ -44,7 +47,7 @@ const LaTraque = () => {
     <div className='list-nouvelles-proies back-orange-dark'> 
         Chasses en Cours
       </div>
-      <CardProfil />
+      {/* <CardProfil /> */}
 
     </div>
 
@@ -52,12 +55,13 @@ const LaTraque = () => {
     <div className='list-nouvelles-proies back-red'>
         Chasses Terminées
       </div>
+      {/* <CardProfil />
       <CardProfil />
       <CardProfil />
       <CardProfil />
       <CardProfil />
+      <CardProfil /> */}
     </div>
-    
   </div>
   )
 };
