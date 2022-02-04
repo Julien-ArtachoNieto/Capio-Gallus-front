@@ -12,6 +12,10 @@ color:white;
 padding:0px;
 }
 
+.link-panier{
+width: min-content;
+}
+
  .image-target{
      width: 5%;
      min-width: 60px;

@@ -1,0 +1,69 @@
+
+
+.bande-profil-card-page{
+    height: 100%;
+    width: auto;
+    border: 2px solid black;
+    background-color: rgb(245, 245, 245);
+    margin:0 5px;
+    padding: 10px 2.5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.bloc-haut-profil-card{
+display: flex;
+justify-content: left;
+align-items: center;
+flex-direction: column;
+}
+
+.photo-target-profil-card{
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+    border:2px solid rgb(173, 173, 173);
+    margin-left: 10px;
+}
+
+.infos-profil-name{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 40px;
+    padding: 20px 0;
+}
+
+.image-target-profil-card{
+    width: 40px;
+    height: 40px;
+padding: 5px 5px;
+margin:0 15px;
+    object-fit: cover;
+    background-color: #cb2d3e;
+    border-radius: 50%;
+}
+
+
+.bloc-bas-profil-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+    width: 80%;
+    height: 80%;
+    /* border-right: 2px solid black; */
+
+}
+
+.ball-item{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+
